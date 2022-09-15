@@ -17,9 +17,9 @@ public class CatTest {
     Feline feline;
 
     @Test
-    public void isGetFoodCallsPredator() throws Exception{
+    public void isGetFoodCallsPredator() throws Exception {
         MockitoAnnotations.openMocks(this);
-        List<String> amazingList = List.of("kurwa bobr","kurwa jezyk", "kurwa dzik");
+        List<String> amazingList = List.of("kurwa bobr", "kurwa jezyk", "kurwa dzik");
         Cat cat = new Cat(feline);
         Mockito.when(feline.eatMeat()).thenReturn(amazingList);
         List<String> food = cat.getFood();
@@ -27,7 +27,7 @@ public class CatTest {
     }
 
     @Test
-    public void isGetSoundReturnSound(){
+    public void isGetSoundReturnSound() {
         MockitoAnnotations.openMocks(this);
         Cat cat = new Cat(feline);
         String family = cat.getSound();
